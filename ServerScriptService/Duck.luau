@@ -4,7 +4,7 @@ local Players = game:GetService("Players")
 
 local ProfileManager = require(ServerStorage.DatastoreUtils.ProfileManager)
 
-local lastDuckStates = {} -- [player] = { [duckName] = {cframe, time} }
+local lastDuckStates: { [Player]: { [string]: { cframe: CFrame, time: number } } } = {}
 
 local MAX_SPEED = 100
 local MAX_TELEPORT = 200
